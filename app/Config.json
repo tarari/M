@@ -1,0 +1,15 @@
+{
+	"dbconf":{
+		"driver":"mysql",
+		"dbname":"app",
+		"dbhost":"localhost",
+		"dbuser":"app",
+		"dbpass":"app"
+	},
+	"app":{
+		"title":"M-demo",
+		"version":"0.3",
+		"repo":"http://gdriv.es/tarari/"
+	}
+
+}

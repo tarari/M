@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css?family=Pragati+Narrow);
+@import url(https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph);
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	
+	background-color: #AF600B;
+	font-family: 'Pragati Narrow', sans-serif;}
+header{
+	display:flex;
+	display: -webkit-flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	color:white;
+	align-items:center;
+	background-color: #0B536E;
+	border:2px solid goldenrod;
+	height:50px;
+	
+}
+a{
+	text-decoration: none;
+}
+nav{
+	float:none;
+	background-color: #023143;
+	color:white;
+}
+nav ul li{
+	display:inline-block;
+	min-width: 100px;
+	color:white;
+	padding-left: 10px;
+}
+.page-header {
+	min-width: 400px;
+	flex-grow:2;
+	padding-bottom: 5px;
+	height: 45px;
+	color:white;
+	font-family:'Rancho',sans-serif;
+
+
+
+}
+.page-header h1{
+	font-size: 200%;
+}
+.page-header  a, .login a{
+	color:white;
+
+}
+.login{
+	display: -webkit-flex;
+	display:flex;
+	align-items: flex-start;
+	flex-direction:column;
+	flex-grow:1;
+	min-width: 400px;
+	font-size: 80%
+	padding-right: 5px;
+	height: 50px;
+	
+}
+.head-msg{
+
+	min-height:30px;
+	padding-top: 5px; 
+	
+}
+
+.container{
+	margin:0px;
+	padding:0px;
+	margin-left: 30px;
+	margin-right: 30px;
+	display:flex;
+	display: -webkit-flex;
+	justify-content:space-around;
+	align-items: center;
+	flex-wrap:wrap;
+	background-color: black;
+	min-height:50vh;
+	
+}
+
+.advert{
+	background-color: #E39948;
+	width: 48%;
+	height: 130px;
+	animation:fadein 2s;
+	border-radius: 3px;
+	border:1px solid black;
+	
+}
+.advert p{
+	font-family: 
+}
+.page-header, .login, .head-msg{
+	font-size:80%;
+}
+
+
+
+.page-header .login p, label, input[type="submit" ]{
+	
+	padding-right: 3px;
+}
+
+
+.message{
+	background-color: #03435B;
+	height: 1.5em;
+	text-align: center;
+	color:white;
+}
+.pnavigation{
+	background-color: #31748E;
+	height: 2em;
+	text-align: center;
+	
+}
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 80%
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: white;
+    float: left;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    background-color: black;
+    color: white;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: blue;}
+.currentp{
+	text-decoration: underline;
+}
+.registre{
+	display:block;
+	border-radius: 5px;
+	background-color: whitesmoke;
+	width:300px;
+	height: 12em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	padding:3px;
+}
+.registre:focus{
+	border-color: blue;
+}
+.form-reg{
+	display: inline-block;
+	margin-left: 15px;
+	color:blueviolet;
+	font-size:80%;
+}
+.form-reg p label input{
+	
+	margin-left:10px;
+	padding:3px;
+}
+
+.btn{
+ display: inline-block;
+ border: none;
+ color: #FFF7F7;
+ border-radius: 3px 3px 3px 3px;
+ -webkit-border-radius: 3px 3px 3px 3px;
+ -moz-border-radius: 3px 3px 3px 3px;
+ width: auto;
+ height: auto;
+ text-align:center;
+ font-size: 14px;
+ padding:auto;
+ box-shadow: inset 0 0px 1px 0 #9E692C,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;
+ -moz-box-shadow: inset 0 0px 1px 0 #9E692C,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;
+ -webkit-box-shadow: inset 0 0px 1px 0 #9E692C,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;
+ text-shadow: 0 1px 0 #FFFFFF;
+ background-color: #FC7553;
+}
+.btn:hover, .btn:active{
+ border: none;
+ color: #705D07;
+ box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+ -moz-box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+ -webkit-box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+ background-color: #FCCBB5;
+}
+
+
+footer{
+	text-align: center;
+}
+@media (max-width: 820px) {
+	header{
+		height:100px;
+		align-items:stretch;
+	}
+	.page-header, .login, .msg-header{
+		display:flex;
+		flex-grow:1;
+		flex-direction:column;
+	}
+  
+}
+@media (max-width: 400px){
+	nav ul li{
+	display:block;
+	min-width: 100px;
+
+	}
+	.advert{
+		width: 100%;
+	}
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
