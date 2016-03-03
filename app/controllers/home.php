@@ -28,8 +28,9 @@
 				$password=md5(filter_input(INPUT_POST,'password',FILTER_SANITIZE_STRING));
 				$user=$this->model->login($email,$password);
 				if ($user==true){
-					Session::set('user',$email);
-					setcookie('user',Session::get('user'),0,APP_W);
+					//Session::set('user',new user());
+					setcookie('user',Session::get('user')->email,0,APP_W);
+					setcookie('rol',Session::get('rol')->rol,0,APP_W);
 					
 					$this->json_out(array('redir'=>APP_W.'dashboard'));
 				
@@ -54,13 +55,13 @@
 			//extracting data via post
 			if(!empty($_POST['p'])){
 				$p=$_POST['p'];
-			}
-			// Coder::code($p);
+			}else{ $p=1;}
+			
 			// die;
 			 $this->model->page=$p;
 			 $dades=$this->model->getData('advertises');
 		
-			 $this->json_out($dades);			
+			$this->json_out($dades);			
 
 		}
 

@@ -13,8 +13,15 @@
 			$this->bind(':email',$email);
 			$this->bind(':password',$password);
 			$this->execute();
+			$user=$this->single();
+			
+			
 			//$this->debugDumpParams();
 			if($this->rowcount()==1){
+				Session::set('user',new user($user['email'],
+				$user['idUser'],
+				$user['rol'],
+				$user['username']));
 				return true;
 			}
 			else{

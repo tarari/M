@@ -13,7 +13,7 @@
 					</form>';
 		}else{
 			echo '<div class="head-msg">';
-			echo '<p>'.$_SESSION['user'].' | <a href="'.APP_W.'home/logout" >Logout</a></p>';
+			echo '<p>'.$_SESSION['user']->email.' | <a href="'.APP_W.'home/logout" >Logout</a></p>';
 
 		}
 	?>

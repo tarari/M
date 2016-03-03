@@ -9,11 +9,11 @@
     'Anuncis'=>APP_W,'adverts'
     );
   include 'common.php';
-?><nav class="navbar navbar-inverse">
+?>
+<nav class="navbar navbar-inverse">
     <?php
       MMenu::create($menu);
-      MMenu::create($adm);
-    ?>
+      ?>
   </nav>
   <div class="admin">
   <?php

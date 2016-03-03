@@ -78,7 +78,7 @@ var create_users_table=function(resp){
 
 };
 
-$(document).ready(function() {
+$(document).ready(function(){
     console.log( "ready!" );
     $('ul.pagination').on('click','li a',function(){
       
@@ -109,7 +109,8 @@ $(document).ready(function() {
     var page=Cookies.get('page');
     if (page==undefined) {
         page=1;
-    }
+    };
+
     $.ajax({
     	url:'home/getPage',
         method:'post',

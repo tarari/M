@@ -57,12 +57,12 @@
 
 	}
 	public function resultset(){
-    	$this->execute();
+    	
 		return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
 	public function single(){
-	    $this->execute();
+	    
 	    return $this->stmt->fetch(PDO::FETCH_ASSOC);
 	}
 	public function rowCount(){
@@ -127,6 +127,7 @@
             $sql="SELECT * FROM ".$table." LIMIT ".$offset.",".$this->limit;
             
             $this->query($sql);
+            $this->execute();
             $data=$this->resultSet();
             Session::set('npages',$this->npages);
             setcookie('npages',Session::get('npages'),0,APP_W);

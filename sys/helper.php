@@ -22,6 +22,7 @@
 	spl_autoload_register('MAutoload::ContLoader');
 	spl_autoload_register('MAutoload::ModLoader');
 	spl_autoload_register('MAutoload::ViewLoader');
+	spl_autoload_register('MAutoload::MapLoader');
 
 
 	class MAutoload{
@@ -53,6 +54,14 @@
 		static function ViewLoader($class){
 			$filename=strtolower($class).'.php';
 			$file=APP.'views'.DS.$filename;
+			if(!file_exists($file)){
+				return false;
+			}
+			require $file;
+		}
+		static function MapLoader($class){
+			$filename=strtolower($class).'.php';
+			$file=APP.'map'.DS.$filename;
 			if(!file_exists($file)){
 				return false;
 			}
